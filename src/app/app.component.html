@@ -28,6 +28,7 @@
                   <mat-label>Confirm Password</mat-label>
                   <input type="password" matInput formControlName=confirmpassword #ref required>
                 </mat-form-field>
+                <br>
                 <span *ngIf="userForm.errors && ref.value!=''" class="mt-2 text-danger">
                   Password doesn't match
                 </span>
@@ -63,7 +64,7 @@
               <span>{{ user[tableHeader]}}</span>
               <span *ngIf="tableHeader=='edit'">
                 <button type="button" mat-icon-button (click)="edit(user,ind)">
-                  <mat-icon>menu</mat-icon>
+                  <mat-icon>edit</mat-icon>
                 </button>
               </span>
               <span *ngIf="tableHeader=='delete'">
